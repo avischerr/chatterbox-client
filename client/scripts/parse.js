@@ -20,3 +20,20 @@ var Parse = {
   }
 
 };
+
+/*
+
+$.ajax({
+  url: 'http://parse.atx.hackreactor.com/chatterbox/classes/messages',
+  type: 'POST',
+  data: JSON.stringify(message),
+  contentType: 'application/json',
+  success: function (data) {
+    console.log('chatterbox: Message sent')
+  },
+  error: function (data) {
+    console.error('chatterbox: Failed to send message', data)
+  }
+})
+
+*/
