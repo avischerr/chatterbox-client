@@ -22,10 +22,18 @@ var App = {
       // examine the response from the server request:
       // console.log(data);
       // store the data in the storage key from messages
-      Messages.storage = data
-      console.log(Messages.storage)
+      // Messages.storage.push(data);
+      // console.log(Messages.storage);
+      Messages = data;
+      console.log(Messages);
       // display the data
-      callback(MessagesView.renderMessages);
+      // callback(MessagesView.renderMessages);
+
+      // this will access the messages
+      // MessagesView.renderMessage();
+      MessagesView.render();
+
+      callback();
     });
   },
 
@@ -34,9 +42,8 @@ var App = {
     FormView.setStatus(true);
   },
 
-  stopSpinner: function(callback) {
+  stopSpinner: function() {
     App.$spinner.fadeOut('fast');
     FormView.setStatus(false);
-    callback();
   }
 };
