@@ -3,7 +3,6 @@ var Parse = {
   server: `http://parse.${window.CAMPUS}.hackreactor.com/chatterbox/classes/messages`,
 
   create: function(message, successCB, errorCB = null) {
-
     $.ajax({
       url: Parse.server,
       type: 'POST',
@@ -11,7 +10,7 @@ var Parse = {
       contentType: 'application/json',
       success: successCB,
       error: errorCB
-    })
+    });
   },
 
   readAll: function(successCB, errorCB = null) {
@@ -26,24 +25,4 @@ var Parse = {
       }
     });
   }
-
 };
-
-
-
-/*
-
-$.ajax({
-  url: 'http://parse.atx.hackreactor.com/chatterbox/classes/messages',
-  type: 'POST',
-  data: JSON.stringify(message),
-  contentType: 'application/json',
-  success: function (data) {
-    console.log('chatterbox: Message sent')
-  },
-  error: function (data) {
-    console.error('chatterbox: Failed to send message', data)
-  }
-})
-
-*/
