@@ -9,30 +9,26 @@ var MessagesView = {
     // Parse.readAll((data));
   },
 
-  renderMessage: function(Messages) {
-    // append all the messages to $.chat
-    // use _.template for security
-    // MessageView.render()
+  renderMessage: function(message) {
+    var $message = MessageView.render(message);
+    MessagesView.$chats.prepend($message);
 
-    var escapedHtml = MessageView.render({
-      username: _.escape(message.username),
-      text: _.escape(message.text),
-      roomname: _.escape(message.roomname),
-      createdAt: _.escape(message.createdAt),
-      updatedAt: _.escape(message.updatedAt)
-    });
-
-    $(escapedHtml).appendTo(MessagesView.$chats);
   },
 
   render: function() {
-    var messages;
+    MessagesView.$chats.html('');
 
-    messages = Messages.results;
 
-    this.filter((message) => {
-      return message.text;
-    });
+
+    // var messages;
+
+    // messages = Messages.results;
+
+    // Messages.each((message) =>
+    //   MessagesView.renderMessage(message));
   }
+
+  // FROM SOLUTION VIDEO:
+  // MessagesView.$chats.append($message);
 
 };

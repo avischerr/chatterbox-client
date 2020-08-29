@@ -11,7 +11,7 @@ var RoomsView = {
       room
     });
 
-    RoomView.$select.append(escapedHtml);
+    RoomsView.$select.append(escapedHtml);
   },
 
   render: function() {
