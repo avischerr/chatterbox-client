@@ -2,11 +2,11 @@ var Rooms = {
 
 };
 
-var RoomView = {
+// var RoomView = {
 
-  render: _.template(`
-    <option class='selectRoom'>
-      <%= room %>
-    </option>
-  `)
-};
+//   render: _.template(`
+//     <option class='selectRoom'>
+//       <%= room %>
+//     </option>
+//   `)
+// };
